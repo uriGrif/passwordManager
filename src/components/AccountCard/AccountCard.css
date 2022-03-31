@@ -1,0 +1,90 @@
+.accountCardContent {
+	background: var(--main-dark-blue);
+	border-radius: 8px;
+	color: var(--main-white);
+	font-family: "Outfit", sans-serif;
+	width: 100%;
+}
+
+.accountCardContent::before {
+	content: "";
+	display: block;
+	position: relative;
+	width: inherit;
+	height: 12px;
+	background: var(--main-dark-blue);
+	transform: translateY(-50%);
+	z-index: -1;
+}
+
+.accountCardControl {
+	background: var(--main-light-blue);
+	border-radius: 8px;
+	color: var(--main-white);
+}
+
+.accountCardButtons {
+	width: 100%;
+	display: flex;
+	margin-top: 20px;
+}
+
+.accountCardButtons .btn {
+	margin: 0 5px;
+}
+
+.cardSubTitle {
+	margin-bottom: 0px;
+	font-weight: 700;
+}
+
+.cardValue {
+	margin: 5px 0px;
+	font-weight: 300;
+	font-size: 1.2rem;
+}
+
+.copyBtn {
+	float: right;
+	height: 30px;
+	margin: 0 2px;
+}
+
+.copyBtn:hover {
+	cursor: pointer;
+}
+
+.showIcon {
+	float: right;
+	height: 30px;
+	margin: 0 2px;
+}
+
+.showIcon:hover {
+	cursor: pointer;
+}
+
+@media (hover: hover) {
+	.accountCardControl:hover {
+		background: #93a3b6;
+	}
+}
+
+@media not all and (hover: hover) {
+	.accountCardControl:hover {
+		background: var(--main-light-blue);
+	}
+}
+
+.accountCardItem {
+	border: none;
+	width: -webkit-fill-available;
+}
+
+.accountCardLabel {
+	color: var(--main-black);
+	font-family: "Outfit", sans-serif;
+	font-weight: 600;
+	text-align: center;
+	margin-left: 44px;
+}

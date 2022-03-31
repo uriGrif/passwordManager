@@ -1,0 +1,50 @@
+.accounts {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 60vw;
+	height: 100vh;
+	margin: auto;
+}
+
+.accountsButtons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 50%;
+}
+
+.accountsButtons button {
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.accountsSearch {
+	width: calc(50% - 10px);
+	font-family: "Outfit", sans-serif;
+}
+
+@media (max-width: 768px) {
+	.accounts {
+		width: 90vw;
+	}
+
+	.accountsButtons {
+		width: 100%;
+	}
+
+	.accountsSearch {
+		width: calc(100% - 10px);
+	}
+}
+
+.accountsList {
+	margin-top: 5vh;
+	display: grid;
+	gap: 10px;
+	width: 100%;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	max-height: 65vh;
+	overflow-y: scroll;
+}

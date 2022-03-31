@@ -1,0 +1,86 @@
+h1 {
+	text-align: center;
+	font-size: 3rem;
+	white-space: pre-wrap;
+	margin-top: 5vh;
+}
+
+:root {
+	--main-black: #1b1e21;
+	--main-white: #eee;
+	--main-light-blue: #a8bacf;
+	--main-dark-blue: #465461;
+}
+
+.bg-shapes {
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	z-index: -10;
+}
+
+.bg-shapes .square {
+	background: #22262b;
+	position: fixed;
+}
+
+.bg-shapes .circle {
+	background: #38434e;
+	position: fixed;
+}
+
+.s1 {
+	width: 40vw;
+	height: 25vh;
+	border-radius: 20px;
+	bottom: -20px;
+	right: -30px;
+}
+
+.s2 {
+	width: 45vw;
+	height: 35vh;
+	border-radius: 20px;
+	bottom: 50vh;
+	right: -30px;
+}
+
+.s3 {
+	width: 30vw;
+	height: 40vh;
+	border-radius: 20px;
+	bottom: -10px;
+	left: -30px;
+}
+
+.c1 {
+	width: 20vh;
+	height: 20vh;
+	border-radius: 50%;
+	top: 5vh;
+	right: 30vw;
+}
+
+.c2 {
+	width: 30vh;
+	height: 30vh;
+	border-radius: 50%;
+	bottom: 5vh;
+	right: 10vw;
+}
+
+.c3 {
+	width: 10vh;
+	height: 10vh;
+	border-radius: 50%;
+	bottom: 40vh;
+	left: 40vw;
+}
+
+.c4 {
+	width: 8vh;
+	height: 8vh;
+	border-radius: 50%;
+	top: 25vh;
+	left: 5vw;
+}

@@ -1,0 +1,17 @@
+.btn {
+	margin: 10px 0px;
+	padding: 10px 5px;
+	width: -webkit-fill-available;
+	border-radius: 8px;
+	border: none;
+	font-size: 1rem;
+	font-family: inherit;
+	background: var(--main-light-blue);
+	color: var(--main-black);
+	font-weight: 600;
+}
+
+.btn:hover {
+	cursor: pointer;
+	background: #93a3b6;
+}
