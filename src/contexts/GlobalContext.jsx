@@ -12,10 +12,6 @@ const getVaultKey = (pswd, key) => {
 };
 
 const encryptAccount = (acc, key) => {
-	console.log("pswd: ");
-	console.log(acc.password);
-	console.log("key: ");
-	console.log(key);
 	return {
 		...acc,
 		password: cryptoJs.AES.encrypt(acc.password, key).toString()
