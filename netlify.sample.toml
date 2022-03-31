@@ -1,0 +1,18 @@
+[dev]
+	functions = "./functions"
+
+[build]
+	functions = "./functions"
+
+[context.deploy-preview.environment]
+	MONGO_URI = ""
+	JWT_SECRET = ""
+
+[context.production.environment]
+	MONGO_URI = ""
+	JWT_SECRET = ""
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
