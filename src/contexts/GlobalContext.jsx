@@ -12,9 +12,17 @@ const getVaultKey = (pswd, key) => {
 };
 
 const encryptAccount = (acc, key) => {
+	let jsonStr = JSON.stringify(acc.password);
+	let encJson = cryptoJs.AES.encrypt(
+		jsonStr.substring(1, jsonStr.length - 1), //remove quotes
+		key
+	).toString();
+	let encPass = cryptoJs.enc.Base64.stringify(
+		cryptoJs.enc.Utf8.parse(encJson)
+	);
 	return {
 		...acc,
-		password: cryptoJs.AES.encrypt(acc.password, key).toString()
+		password: encPass
 	};
 };
 
@@ -126,11 +134,15 @@ const GlobalProvider = ({ children }) => {
 	};
 
 	const decryptAccount = account => {
+		let decData = cryptoJs.enc.Base64.parse(account.password).toString(
+			cryptoJs.enc.Utf8
+		);
+		let bytes = cryptoJs.AES.decrypt(decData, vaultKey).toString(
+			cryptoJs.enc.Utf8
+		);
 		return {
 			...account,
-			password: cryptoJs.AES.decrypt(account.password, vaultKey).toString(
-				cryptoJs.enc.Utf8
-			)
+			password: bytes
 		};
 	};
 
