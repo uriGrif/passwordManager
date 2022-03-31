@@ -5,7 +5,6 @@
 	width: 60vw;
 	height: 100vh;
 	margin: auto;
-	margin-bottom: 50px;
 }
 
 .accountsButtons {
@@ -46,6 +45,7 @@
 	gap: 10px;
 	width: 100%;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-	max-height: 65vh;
+	max-height: 60vh;
 	overflow-y: scroll;
+	padding-bottom: 30px;
 }
